@@ -15,7 +15,11 @@ void Game::Initialize() {
 }
 
 void Game::Update() {
-
+	for (int y = 0; y != height; ++y) {
+		for (int x = 0; x != width; ++x) {
+			pixels[x + y * width] = 0x0000FF00;
+		}
+	}
 	window.Present(pixels);
 }
 
